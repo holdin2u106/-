@@ -89,14 +89,6 @@
     .notice{border-left:3px solid var(--accent2); padding-left:12px}
     .two{grid-template-columns:1fr 1fr}
     @media (max-width:880px){.two{grid-template-columns:1fr}}
-    label{display:block; font-size:13px; color:var(--muted); margin:10px 0 6px}
-    input, textarea{
-      width:100%; padding:10px 12px; border-radius:12px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(0,0,0,.20);
-      color:var(--text)
-    }
-    textarea{min-height:120px; resize:vertical}
     footer{padding:26px 0 40px; color:rgba(255,255,255,.6)}
     .small{font-size:13px}
     .tag{
@@ -122,12 +114,8 @@
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
         <div>
-          <div style="font-weight:800">
-            墨西哥物資援助站
-          </div>
-          <div class="small muted">
-            Ayuda de Suministros — México · Mexico Relief Supplies
-          </div>
+          <div style="font-weight:800">墨西哥物資援助站</div>
+          <div class="small muted">Ayuda de Suministros — México · Mexico Relief Supplies</div>
         </div>
       </div>
 
@@ -225,13 +213,10 @@
           <p class="muted">
             捐款會用於採購與運送物資，並在「更新」區發布進度。
           </p>
-          <div class="tag">飲料包</div>
-          <div class="tag">睡袋</div>
-          <div class="tag">帳篷</div>
-          <div class="tag">水</div>
+          <div class="tag">飲料包</div><div class="tag">睡袋</div><div class="tag">帳篷</div><div class="tag">水</div>
           <ul>
             <li>你可以使用加密貨幣（TRC20）直接捐款。</li>
-            <li>台灣銀行轉帳：<b>不公開帳號</b>，請用表單聯絡後提供（避免被仿冒/釣魚）。</li>
+            <li>台灣銀行轉帳：<b>不公開帳號</b>，請透過聯絡表單索取（避免被仿冒/釣魚）。</li>
           </ul>
         </div>
 
@@ -284,7 +269,7 @@
         <div class="card">
           <b>加密貨幣（USDT TRC20）</b>
           <p class="muted small">
-            僅使用下方地址收款。請確認鏈別為 <b>TRC20</b>，避免誤轉造成損失。
+            請確認鏈別為 <b>TRC20</b>，避免誤轉造成損失。
           </p>
 
           <div class="card" style="background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.12)">
@@ -305,15 +290,12 @@
         <div class="card">
           <b>台灣銀行轉帳（不公開帳號）</b>
           <p class="muted">
-            你提供的銀行資訊會在後期以「私下提供」方式給捐款者，避免被仿冒。
+            為避免被仿冒或釣魚，台灣銀行轉帳資訊採「聯絡後提供」。
           </p>
           <ul>
-            <li>請到「聯絡」表單留言：希望用台灣銀行捐款。</li>
-            <li>我們會回覆轉帳資訊與對帳方式。</li>
+            <li>請到「聯絡」填表，選擇「台幣（台灣銀行轉帳）」。</li>
+            <li>我們會用你留下的 Email 回覆轉帳資訊與對帳方式。</li>
           </ul>
-          <div class="warn small muted">
-            我已把你提供的玉山銀行帳號<b>保留在你的私下資料</b>，但網站公開版本<b>不會顯示</b>。
-          </div>
         </div>
       </div>
     </section>
@@ -327,9 +309,6 @@
             <li><b>至少每週</b>更新一次進度（採購/發放/需求變動）。</li>
             <li><b>每月</b>整理一次收支摘要（可遮蔽個資/敏感資訊）。</li>
           </ul>
-          <p class="small muted">
-            你可以把收支摘要放在 Google Sheet / PDF，再把連結貼到此區塊。
-          </p>
         </div>
 
         <div class="card">
@@ -337,33 +316,24 @@
           <ul>
             <li>不公開精準地址、受助者個資、敏感照片。</li>
             <li>只提供「地區層級」描述（墨西哥地區）。</li>
-            <li>必要時照片會遮蔽臉部或可識別資訊。</li>
           </ul>
         </div>
       </div>
 
       <div class="card" style="margin-top:14px">
         <b>退款/退捐原則（建議版）</b>
-        <p class="muted small" style="margin-top:8px">
-          你尚未填寫退款規則，我先放一個「不會害你被追殺、又相對合理」的版本：
-        </p>
         <ul>
           <li>若捐款在 <b>7 天內</b>且<b>尚未使用</b>於採購/運送，可提出退捐申請（以可核對紀錄為準）。</li>
           <li>若已投入採購或發放，將以「等值物資/已執行支出」方式在更新中公開說明，通常不退。</li>
-          <li>退捐申請請透過本頁表單聯絡，並提供捐款交易憑證。</li>
+          <li>退捐申請請透過聯絡表單提出，並提供捐款交易憑證。</li>
         </ul>
-        <p class="small muted">
-          如果你想改成「不退捐」或「指定用途才接受」，我也可以幫你改文字。
-        </p>
       </div>
     </section>
 
     <section id="updates">
       <h2>最新更新</h2>
       <div class="card">
-        <p class="muted">
-          你只要編輯 <code>updates.json</code> 就能更新公告（不用動 HTML）。
-        </p>
+        <p class="muted">你只要編輯 <code>updates.json</code> 就能更新公告（不用動 HTML）。</p>
         <div id="updatesList" class="muted">載入中…</div>
       </div>
     </section>
@@ -372,39 +342,30 @@
       <h2>聯絡</h2>
       <div class="grid two">
         <div class="card">
-          <b>聯絡表單（免後端）</b>
+          <b>聯絡表單（Jotform）</b>
           <p class="muted small">
-            如果你用 Netlify 發佈，可直接啟用 <b>Netlify Forms</b> 收件。
-            如果用 GitHub Pages，也可以改成 Formspree（我在 README 教你怎麼改一行）。
+            GitHub Pages 無法接收網頁表單送出，因此我們改用 Jotform。
+            你填完送出後，我們會用你留下的 Email 回覆（包含台幣轉帳資訊的索取）。
           </p>
 
-          <!-- Netlify Forms ready -->
-         <div class="card">
-  <b>聯絡表單</b>
-  <p class="muted small">
-    請點下方按鈕填寫聯絡表單，送出後我們會用你留下的 Email 回覆。
-    （若你想用台幣捐款，也會在回覆中提供轉帳資訊與對帳方式）
-  </p>
+          <a class="btn primary" target="_blank" rel="noopener"
+             href="https://form.jotform.com/260538391893064">
+            前往填寫聯絡表單
+          </a>
 
-  <a class="btn primary" target="_blank" rel="noopener"
-     href="https://form.jotform.com/260538391893064">
-    打開聯絡表單（Jotform）
-  </a>
-
-  <p class="small muted" style="margin-top:10px">
-    防詐騙提醒：我們不會私訊要求更換收款地址；以本網站與 IG 公告為準。
-  </p>
-</div>
+          <p class="small muted" style="margin-top:10px">
+            你送出表單後，我們會收到 email 通知並回覆你。
+          </p>
         </div>
 
         <div class="card">
           <b>官方管道</b>
-          <p class="muted">目前你提供的公開管道只有 IG，我已做成唯一官方外連：</p>
+          <p class="muted">唯一公開社群：</p>
           <ul>
             <li>Instagram：<a target="_blank" rel="noopener" href="https://www.instagram.com/Holdin2u/"><span class="mono">@Holdin2u</span></a></li>
           </ul>
           <p class="small muted">
-            建議你之後補一個 Email（例如組織信箱），信任感會更高。
+            防詐騙提醒：我們不會私訊要求更換收款地址；以本網站與 IG 公告為準。
           </p>
         </div>
       </div>
@@ -430,8 +391,6 @@
       });
     }
 
-    // updates.json structure:
-    // [{ "date":"2026-02-24", "title":"...", "body":"..." }, ...]
     fetch('./updates.json')
       .then(r => r.ok ? r.json() : [])
       .then(items => {
