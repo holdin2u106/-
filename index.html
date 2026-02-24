@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>墨西哥物資援助站｜Ayuda de Suministros — México｜Mexico Relief Supplies</title>
+  <meta name="description" content="墨西哥地區物資援助：募集捐款，用於飲料包、睡袋、帳篷與水等急需物資。提供透明更新與防詐騙公告。" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="墨西哥物資援助站｜Mexico Relief Supplies" />
+  <meta property="og:description" content="募集捐款，協助墨西哥地區物資援助（飲料包、睡袋、帳篷、水）。提供透明更新。" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b1020; --card:#111a33; --text:#e8ecff; --muted:#b7c0ff;
+      --accent:#7aa2ff; --accent2:#68f0c6; --danger:#ff6b6b;
+      --max:1080px; --r:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:radial-gradient(1200px 600px at 20% 0%, #172454 0%, var(--bg) 55%);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:12px; position:sticky; top:0;
+      background:rgba(11,16,32,.72); backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      z-index:10;
+    }
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 10px 30px rgba(122,162,255,.22);
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap}
+    nav a{
+      opacity:.9; text-decoration:none; padding:8px 10px; border-radius:12px
+    }
+    nav a:hover{background:rgba(255,255,255,.06)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:10px 14px; border-radius:14px; text-decoration:none;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      cursor:pointer;
+    }
+    .btn.primary{background:linear-gradient(135deg,var(--accent),#8b7aff); border:none; color:#081024}
+    .btn.ghost{background:transparent}
+    .hero{padding:56px 0 28px}
+    .grid{display:grid; gap:18px}
+    .hero-grid{grid-template-columns: 1.2fr .8fr}
+    @media (max-width:880px){.hero-grid{grid-template-columns:1fr}}
+    h1{font-size:40px; line-height:1.1; margin:0 0 12px}
+    .lead{color:var(--muted); font-size:16.5px; margin:0 0 18px}
+    .card{
+      background:rgba(17,26,51,.9);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--r);
+      padding:18px;
+      box-shadow:0 18px 60px rgba(0,0,0,.25)
+    }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:6px 10px; border-radius:999px;
+      background:rgba(104,240,198,.12);
+      border:1px solid rgba(104,240,198,.25);
+      color:#cafff0;
+      font-size:13px
+    }
+    .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px}
+    @media (max-width:720px){.stats{grid-template-columns:1fr}}
+    .stat b{font-size:22px}
+    section{padding:22px 0}
+    h2{margin:0 0 10px; font-size:22px}
+    .cols{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:980px){.cols{grid-template-columns:1fr}}
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .kpi{display:flex; gap:10px; align-items:flex-start}
+    .dot{width:10px; height:10px; margin-top:6px; border-radius:50%; background:var(--accent2)}
+    .muted{color:var(--muted)}
+    .notice{border-left:3px solid var(--accent2); padding-left:12px}
+    .two{grid-template-columns:1fr 1fr}
+    @media (max-width:880px){.two{grid-template-columns:1fr}}
+    label{display:block; font-size:13px; color:var(--muted); margin:10px 0 6px}
+    input, textarea{
+      width:100%; padding:10px 12px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.20);
+      color:var(--text)
+    }
+    textarea{min-height:120px; resize:vertical}
+    footer{padding:26px 0 40px; color:rgba(255,255,255,.6)}
+    .small{font-size:13px}
+    .tag{
+      display:inline-block; padding:4px 8px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      margin-right:6px; margin-top:6px;
+      color:rgba(255,255,255,.75); font-size:12px
+    }
+    .warn{
+      border:1px solid rgba(255,107,107,.35);
+      background:rgba(255,107,107,.08);
+      border-radius:14px;
+      padding:12px;
+    }
+    code{color:#d7ddff}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:800">
+            墨西哥物資援助站
+          </div>
+          <div class="small muted">
+            Ayuda de Suministros — México · Mexico Relief Supplies
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#how">怎麼幫</a>
+        <a href="#needs">物資需求</a>
+        <a href="#donate">捐款方式</a>
+        <a href="#transparency">透明度</a>
+        <a href="#updates">更新</a>
+        <a href="#contact" class="btn primary">聯絡 / 捐款</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="grid hero-grid">
+        <div>
+          <span class="pill">✅ 物資導向 · 🧾 可追蹤更新 · 🛡️ 防詐騙公告</span>
+          <h1>為墨西哥地區提供物資援助</h1>
+          <p class="lead">
+            我們募集捐款，優先採購並提供急需物資：<b>飲料包、睡袋、帳篷、水</b>。
+            我們會定期更新採購與發放進度，並避免公開過於精準的地點資訊以保障安全。
+          </p>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn primary" href="#donate">我想捐款</a>
+            <a class="btn" href="#needs">看物資需求</a>
+            <a class="btn ghost" href="#transparency">看透明度規則</a>
+          </div>
+
+          <div class="stats">
+            <div class="card stat">
+              <div class="muted small">服務地區</div>
+              <b>墨西哥</b>
+              <div class="muted small">不公開精準地址</div>
+            </div>
+            <div class="card stat">
+              <div class="muted small">援助類型</div>
+              <b>捐款</b>
+              <div class="muted small">用於物資採購</div>
+            </div>
+            <div class="card stat">
+              <div class="muted small">官方 IG</div>
+              <b class="mono">@Holdin2u</b>
+              <div class="muted small">唯一公開社群</div>
+            </div>
+          </div>
+
+          <div class="warn" style="margin-top:14px">
+            <b style="color:var(--danger)">防詐騙提醒</b>
+            <div class="small muted" style="margin-top:6px">
+              1) 我們<b>不會私訊你要求更換收款地址</b>。<br/>
+              2) 任何「保證獲利、催促立刻轉帳、要求私下交易」一律當作詐騙。<br/>
+              3) 以本網站與 IG（<span class="mono">@Holdin2u</span>）公告為準。
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="notice">我們的做法（簡化版）</h2>
+
+          <div class="kpi"><span class="dot"></span><div>
+            <b>1) 物資優先</b>
+            <div class="muted small">以飲料包、睡袋、帳篷、水等「立即可用」物資為主。</div>
+          </div></div>
+
+          <div class="kpi"><span class="dot"></span><div>
+            <b>2) 可追蹤更新</b>
+            <div class="muted small">用公告更新採購/發放進度（避免揭露敏感資訊）。</div>
+          </div></div>
+
+          <div class="kpi"><span class="dot"></span><div>
+            <b>3) 安全優先</b>
+            <div class="muted small">不公開精準地點與受助者個資，降低風險。</div>
+          </div></div>
+
+          <div class="kpi"><span class="dot"></span><div>
+            <b>4) 透明度承諾</b>
+            <div class="muted small">至少每週更新進度；每月整理一次收支摘要（可遮個資）。</div>
+          </div></div>
+
+          <p class="small muted" style="margin-top:12px">
+            ※ 緊急狀況請依當地官方緊急服務與救援指引為主。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>怎麼幫</h2>
+      <div class="grid two">
+        <div class="card">
+          <b>捐款（用於物資）</b>
+          <p class="muted">
+            捐款會用於採購與運送物資，並在「更新」區發布進度。
+          </p>
+          <div class="tag">飲料包</div>
+          <div class="tag">睡袋</div>
+          <div class="tag">帳篷</div>
+          <div class="tag">水</div>
+          <ul>
+            <li>你可以使用加密貨幣（TRC20）直接捐款。</li>
+            <li>台灣銀行轉帳：<b>不公開帳號</b>，請用表單聯絡後提供（避免被仿冒/釣魚）。</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <b>分享與轉發</b>
+          <p class="muted">
+            如果你不方便捐款，也可以協助分享本頁與 IG，讓更多人看見需求。
+          </p>
+          <ul>
+            <li>分享時請使用本網站網址或 IG（<span class="mono">@Holdin2u</span>）。</li>
+            <li>不要轉發任何「私訊改地址」或「代收代付」訊息。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="needs">
+      <h2>物資需求（前三大）</h2>
+      <div class="grid cols">
+        <div class="card">
+          <b>飲料包</b>
+          <ul>
+            <li>可即食/即飲</li>
+            <li>便於搬運與分發</li>
+          </ul>
+        </div>
+        <div class="card">
+          <b>睡袋</b>
+          <ul>
+            <li>耐用、保暖</li>
+            <li>適合臨時安置</li>
+          </ul>
+        </div>
+        <div class="card">
+          <b>帳篷 / 水</b>
+          <ul>
+            <li>臨時遮蔽與安置</li>
+            <li>安全飲用水</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top:10px">
+        目前以「捐款→採購物資」為主；避免無協調直接寄送物資造成物流壅塞。
+      </p>
+    </section>
+
+    <section id="donate">
+      <h2>捐款方式</h2>
+      <div class="grid two">
+        <div class="card">
+          <b>加密貨幣（USDT TRC20）</b>
+          <p class="muted small">
+            僅使用下方地址收款。請確認鏈別為 <b>TRC20</b>，避免誤轉造成損失。
+          </p>
+
+          <div class="card" style="background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.12)">
+            <div class="small muted">TRC20 收款地址</div>
+            <div class="mono" id="trcAddr" style="word-break:break-all; font-weight:700; margin-top:6px;">
+              TCd8q4hzY3bXL7zop1QTtqaY9Jq8Y8Z636
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+              <button class="btn primary" type="button" onclick="copyAddr()">一鍵複製地址</button>
+              <a class="btn" target="_blank" rel="noopener" href="https://www.instagram.com/Holdin2u/">前往 IG 驗證</a>
+            </div>
+            <div class="small muted" style="margin-top:10px">
+              注意：我們不會私訊你「新地址」。若看到不同地址，請以本頁與 IG 公告為準。
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <b>台灣銀行轉帳（不公開帳號）</b>
+          <p class="muted">
+            你提供的銀行資訊會在後期以「私下提供」方式給捐款者，避免被仿冒。
+          </p>
+          <ul>
+            <li>請到「聯絡」表單留言：希望用台灣銀行捐款。</li>
+            <li>我們會回覆轉帳資訊與對帳方式。</li>
+          </ul>
+          <div class="warn small muted">
+            我已把你提供的玉山銀行帳號<b>保留在你的私下資料</b>，但網站公開版本<b>不會顯示</b>。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="transparency">
+      <h2>透明度與規則</h2>
+      <div class="grid two">
+        <div class="card">
+          <b>更新頻率</b>
+          <ul>
+            <li><b>至少每週</b>更新一次進度（採購/發放/需求變動）。</li>
+            <li><b>每月</b>整理一次收支摘要（可遮蔽個資/敏感資訊）。</li>
+          </ul>
+          <p class="small muted">
+            你可以把收支摘要放在 Google Sheet / PDF，再把連結貼到此區塊。
+          </p>
+        </div>
+
+        <div class="card">
+          <b>隱私與安全</b>
+          <ul>
+            <li>不公開精準地址、受助者個資、敏感照片。</li>
+            <li>只提供「地區層級」描述（墨西哥地區）。</li>
+            <li>必要時照片會遮蔽臉部或可識別資訊。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <b>退款/退捐原則（建議版）</b>
+        <p class="muted small" style="margin-top:8px">
+          你尚未填寫退款規則，我先放一個「不會害你被追殺、又相對合理」的版本：
+        </p>
+        <ul>
+          <li>若捐款在 <b>7 天內</b>且<b>尚未使用</b>於採購/運送，可提出退捐申請（以可核對紀錄為準）。</li>
+          <li>若已投入採購或發放，將以「等值物資/已執行支出」方式在更新中公開說明，通常不退。</li>
+          <li>退捐申請請透過本頁表單聯絡，並提供捐款交易憑證。</li>
+        </ul>
+        <p class="small muted">
+          如果你想改成「不退捐」或「指定用途才接受」，我也可以幫你改文字。
+        </p>
+      </div>
+    </section>
+
+    <section id="updates">
+      <h2>最新更新</h2>
+      <div class="card">
+        <p class="muted">
+          你只要編輯 <code>updates.json</code> 就能更新公告（不用動 HTML）。
+        </p>
+        <div id="updatesList" class="muted">載入中…</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>聯絡</h2>
+      <div class="grid two">
+        <div class="card">
+          <b>聯絡表單（免後端）</b>
+          <p class="muted small">
+            如果你用 Netlify 發佈，可直接啟用 <b>Netlify Forms</b> 收件。
+            如果用 GitHub Pages，也可以改成 Formspree（我在 README 教你怎麼改一行）。
+          </p>
+
+          <!-- Netlify Forms ready -->
+          <form name="contacto" method="POST" data-netlify="true">
+            <label>你的名字</label>
+            <input name="name" required />
+            <label>Email（用來回覆你）</label>
+            <input name="email" type="email" required />
+            <label>你想怎麼捐</label>
+            <input name="method" placeholder="USDT TRC20 / 台灣銀行 / 其他" />
+            <label>訊息</label>
+            <textarea name="message" placeholder="例如：我想用台灣銀行捐款，請提供轉帳資訊與對帳方式。" required></textarea>
+            <button class="btn primary" type="submit">送出</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <b>官方管道</b>
+          <p class="muted">目前你提供的公開管道只有 IG，我已做成唯一官方外連：</p>
+          <ul>
+            <li>Instagram：<a target="_blank" rel="noopener" href="https://www.instagram.com/Holdin2u/"><span class="mono">@Holdin2u</span></a></li>
+          </ul>
+          <p class="small muted">
+            建議你之後補一個 Email（例如組織信箱），信任感會更高。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">
+        © <span id="year"></span> 墨西哥物資援助站 ·
+        <span class="muted">Ayuda de Suministros — México · Mexico Relief Supplies</span>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function copyAddr(){
+      const addr = document.getElementById('trcAddr').textContent.trim();
+      navigator.clipboard.writeText(addr).then(() => {
+        alert('已複製：' + addr);
+      }).catch(() => {
+        alert('複製失敗，請手動選取複製。');
+      });
+    }
+
+    // updates.json structure:
+    // [{ "date":"2026-02-24", "title":"...", "body":"..." }, ...]
+    fetch('./updates.json')
+      .then(r => r.ok ? r.json() : [])
+      .then(items => {
+        const el = document.getElementById('updatesList');
+        if (!items.length) {
+          el.innerHTML = '<div class="muted">目前尚無更新。請編輯 <code>updates.json</code>。</div>';
+          return;
+        }
+        el.innerHTML = items.slice(0,8).map(u => `
+          <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)">
+            <div class="small muted">${u.date}</div>
+            <div style="font-weight:800">${u.title}</div>
+            <div class="small muted">${u.body}</div>
+          </div>
+        `).join('');
+      })
+      .catch(() => {
+        document.getElementById('updatesList').innerHTML =
+          '<div class="muted">載入 <code>updates.json</code> 失敗。請確認它與 index.html 放在同資料夾。</div>';
+      });
+  </script>
+</body>
+</html>
